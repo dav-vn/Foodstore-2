@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 
 @Component({
   selector: 'app-search',
@@ -8,7 +8,7 @@ import {ActivatedRoute} from "@angular/router";
 })
 export class SearchComponent {
     searchTerm: String = '';
-    constructor(private route:ActivatedRoute) {
+    constructor(private route:ActivatedRoute, private router: Router) {
     }
 
     ngOnInit(): void {
@@ -17,4 +17,10 @@ export class SearchComponent {
           this.searchTerm = params.searchTerm;
         })
     }
+
+    search(): void {
+
+    }
 }
+
+
