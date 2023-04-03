@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Tag} from "../shared/modules/Tag";
 
 @Component({
   selector: 'app-tags',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./tags.component.css']
 })
 export class TagsComponent {
-
+    tags: Tag[] = [];
 }
