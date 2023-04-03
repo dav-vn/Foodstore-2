@@ -17,7 +17,6 @@ import { FoodPageComponent } from './food-page/food-page.component';
     HomeComponent,
     SearchComponent,
     TagsComponent,
-    TagsComponent,
     FoodPageComponent
   ],
   imports: [

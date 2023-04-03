@@ -1,6 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {Tag} from "../shared/modules/Tag";
-import {Food} from "../shared/modules/Food";
 import {FoodService} from "../services/food/food.service";
 
 @Component({
@@ -9,10 +8,13 @@ import {FoodService} from "../services/food/food.service";
   styleUrls: ['./tags.component.css']
 })
 export class TagsComponent {
-    tags: Tag[] = [];
+    @Input()
+    foodPageTags?: String[];
+    tags?: Tag[];
     constructor(private foodservice: FoodService) {
     }
     ngOnInit(): void {
+      if(!this.foodPageTags)
       this.tags = this.foodservice.getAllTags()
     }
 }
