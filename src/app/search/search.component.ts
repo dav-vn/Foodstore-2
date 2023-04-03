@@ -13,6 +13,7 @@ export class SearchComponent {
 
     ngOnInit(): void {
         this.route.params.subscribe(params => {
+          if(params.searchTerm)
           this.searchTerm = params.searchTerm;
         })
     }
