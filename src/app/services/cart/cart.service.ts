@@ -26,4 +26,9 @@ export class CartService {
       if(!cartItem) return;
       cartItem.quantity = quantity;
   }
+
+  getCart():Cart {
+    return this.cart
+  }
+
 }
